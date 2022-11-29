@@ -1,10 +1,12 @@
+const ROOT = `${__dirname}/../`
 
-
-// Test
-const test = (req, res) => {
-    res.json({message: "Views Test Route successful.."});
+// Root
+const root = (req, res) => {
+    res.sendFile('/views/signup.html', {
+        root: ROOT
+    });
 };
 
 module.exports = {
-    test
+    root
 }

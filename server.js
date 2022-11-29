@@ -8,6 +8,9 @@ const routes = require('./routes');
 
 app.use(express.static(`${__dirname}/public`));
 
+// HTML Routes
+app.use('/', routes.views);
+
 // API Routes
 app.use('/api/v1', routes.api);
 
