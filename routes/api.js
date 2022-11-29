@@ -6,7 +6,9 @@ const ctrl = require('../controllers');
 router.get('/test', ctrl.auth.test);
 
 // Create User (SignUp)
-router.post('/signup', )
+router.post('/signup', ctrl.auth.signup);
+
+router.post('/log', ctrl.auth.log);
 
 
 module.exports = router;

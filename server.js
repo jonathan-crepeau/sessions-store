@@ -8,6 +8,10 @@ const routes = require('./routes');
 // Serve Static Files To Client
 app.use(express.static(`${__dirname}/public`));
 
+// SECTION Middleware
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
 // SECTION HTML Routes
 app.use('/', routes.views);
 
