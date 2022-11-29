@@ -5,13 +5,13 @@ const PORT = process.env.PORT || 4000;
 
 const routes = require('./routes');
 
-
+// Serve Static Files To Client
 app.use(express.static(`${__dirname}/public`));
 
-// HTML Routes
+// SECTION HTML Routes
 app.use('/', routes.views);
 
-// API Routes
+// SECTION API Routes
 app.use('/api/v1', routes.api);
 
 app.listen(PORT, () => {
